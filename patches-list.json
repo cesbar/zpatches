@@ -1,4 +1,13 @@
 {
-  "version": "",
-  "patches": []
+  "version": "v1.0.0",
+  "patches": [
+    {
+      "name": "Test Patch",
+      "description": "Test",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": null,
+      "options": []
+    }
+  ]
 }
