@@ -2,11 +2,15 @@
   "version": "1.0.0",
   "patches": [
     {
-      "name": "Test Patch",
-      "description": "Test",
+      "name": "In-app login",
+      "description": "Use the in-app login (identities) instead of the browser login (keycloak)",
       "use": true,
       "dependencies": [],
-      "compatiblePackages": null,
+      "compatiblePackages": {
+        "com.jcdecaux.vls.lyon": [
+          "3.1.1"
+        ]
+      },
       "options": []
     }
   ]
