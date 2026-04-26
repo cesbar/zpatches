@@ -1,5 +1,4 @@
 group = "app.cesbar.patches"
-version = "1.0.0"
 
 patches {
     about {
