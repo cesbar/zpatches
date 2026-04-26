@@ -13,9 +13,9 @@ import com.android.tools.smali.dexlib2.iface.reference.StringReference
 import com.android.tools.smali.dexlib2.immutable.reference.ImmutableStringReference
 
 @Suppress("unused")
-val inAppLoginPatch = bytecodePatch(
-    name = "In-app login",
-    description = "Login within the app (identities) instead of using the browser (keycloak)"
+val noGeoCheckPatch = bytecodePatch(
+    name = "No geolocalisation check",
+    description = "Allows you to unlock a bike even if you're not near the station."
 ) {
     compatibleWith(Compatibility(
         name = "Vélo'v",
@@ -31,7 +31,7 @@ val inAppLoginPatch = bytecodePatch(
 
         val stringIndex = instructions.indexOfFirst {
             val ref = (it as? ReferenceInstruction)?.reference as? StringReference
-            ref?.string == "keycloak.enabled"
+            ref?.string == "geolocation.check.disabled"
         }
         if (stringIndex == -1) return@execute
 
@@ -46,8 +46,8 @@ val inAppLoginPatch = bytecodePatch(
             BuilderInstruction21c(Opcode.CONST_STRING, stringInst.registerA, ImmutableStringReference("inexistent.key"))
         )
         methodP.replaceInstruction(
-            stringIndex + 1,           // set default value to false (0)
-            BuilderInstruction11n(Opcode.CONST_4, boolInst.registerA, 0)
+            stringIndex + 1,            // set default value to true (1)
+            BuilderInstruction11n(Opcode.CONST_4, boolInst.registerA, 1)
         )
     }
 }
