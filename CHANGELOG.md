@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/cesbar/zpatches/compare/v1.0.0...v1.0.1) (2026-04-26)
+
+
+### Bug Fixes
+
+* re-run actions ([3368847](https://github.com/cesbar/zpatches/commit/33688478dc365cde5b3bd2eeca89a9aa6dc8518c))
+
 # 1.0.0 (2026-04-26)
 
 
