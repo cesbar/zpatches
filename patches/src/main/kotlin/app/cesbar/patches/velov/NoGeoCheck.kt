@@ -6,11 +6,10 @@ import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.bytecodePatch
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction11n
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21c
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21s
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction11x
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
-import com.android.tools.smali.dexlib2.immutable.reference.ImmutableStringReference
 
 @Suppress("unused")
 val noGeoCheckPatch = bytecodePatch(
@@ -28,26 +27,24 @@ val noGeoCheckPatch = bytecodePatch(
         val methodP = ContractsMapperPFingerprint.method
         val instructions = (methodP.implementation as? MutableMethodImplementation)?.instructions ?: return@execute
 
-
         val stringIndex = instructions.indexOfFirst {
             val ref = (it as? ReferenceInstruction)?.reference as? StringReference
             ref?.string == "geolocation.check.disabled"
         }
         if (stringIndex == -1) return@execute
 
+        val invokeIndex = instructions.withIndex().indexOfFirst { (idx, inst) ->
+            idx > stringIndex && inst.opcode.name.startsWith("invoke-")
+        }
+        if (invokeIndex == -1) return@execute
 
-        val stringInst = instructions[stringIndex] as BuilderInstruction21c
-        val boolInst = instructions.getOrNull(stringIndex + 1) as? BuilderInstruction11n
-        if (boolInst?.opcode != Opcode.CONST_4) return@execute
-
+        val moveResultIndex = invokeIndex + 1
+        val moveResultInst = instructions.getOrNull(moveResultIndex) as? Instruction11x
+        if (moveResultInst?.opcode?.name != "move-result") return@execute
 
         methodP.replaceInstruction(
-            stringIndex,
-            BuilderInstruction21c(Opcode.CONST_STRING, stringInst.registerA, ImmutableStringReference("inexistent.key"))
-        )
-        methodP.replaceInstruction(
-            stringIndex + 1,            // set default value to true (1)
-            BuilderInstruction11n(Opcode.CONST_4, boolInst.registerA, 1)
+            moveResultIndex,
+            BuilderInstruction21s(Opcode.CONST_16, moveResultInst.registerA, 1)
         )
     }
 }
