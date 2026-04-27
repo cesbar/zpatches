@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-04-27T18:04:17",
-  "description": "# [1.1.0](https://github.com/cesbar/zpatches/compare/v1.0.1...v1.1.0) (2026-04-27)\n\n\n### Bug Fixes\n\n* forgot resource utils ([b887310](https://github.com/cesbar/zpatches/commit/b8873109222df4adf7a55767abd7b5ff915a42bb))\n\n\n### Features\n\n* **velov:** Custom Maps api key ([27639d2](https://github.com/cesbar/zpatches/commit/27639d2ce4f1234a0acfff0f3d8c038c88339c0e))",
-  "download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.0/patches-1.1.0.mpp",
-  "signature_download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.0/patches-1.1.0.mpp.asc",
-  "version": "1.1.0"
+  "created_at": "2026-04-27T20:18:34",
+  "description": "## [1.1.1](https://github.com/cesbar/zpatches/compare/v1.1.0...v1.1.1) (2026-04-27)\n\n\n### Bug Fixes\n\n* **velov:** Feature flags patches not working ([9be8fcc](https://github.com/cesbar/zpatches/commit/9be8fccf693bccd08b9689a5844d5abcb7069358))",
+  "download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.1/patches-1.1.1.mpp",
+  "signature_download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.1/patches-1.1.1.mpp.asc",
+  "version": "1.1.1"
 }

@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/cesbar/zpatches/compare/v1.1.0...v1.1.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* **velov:** Feature flags patches not working ([9be8fcc](https://github.com/cesbar/zpatches/commit/9be8fccf693bccd08b9689a5844d5abcb7069358))
+
 # [1.1.0](https://github.com/cesbar/zpatches/compare/v1.0.1...v1.1.0) (2026-04-27)
 
 
