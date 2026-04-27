@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/cesbar/zpatches/compare/v1.0.1...v1.1.0) (2026-04-27)
+
+
+### Bug Fixes
+
+* forgot resource utils ([b887310](https://github.com/cesbar/zpatches/commit/b8873109222df4adf7a55767abd7b5ff915a42bb))
+
+
+### Features
+
+* **velov:** Custom Maps api key ([27639d2](https://github.com/cesbar/zpatches/commit/27639d2ce4f1234a0acfff0f3d8c038c88339c0e))
+
 ## [1.0.1](https://github.com/cesbar/zpatches/compare/v1.0.0...v1.0.1) (2026-04-26)
 
 

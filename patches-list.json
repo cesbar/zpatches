@@ -1,6 +1,28 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "patches": [
+    {
+      "name": "Custom Maps API Key",
+      "description": "Replace Velo'v Google Maps key with your own to fix it",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "com.jcdecaux.vls.lyon": [
+          "3.1.1"
+        ]
+      },
+      "options": [
+        {
+          "key": "mapApiKey",
+          "title": "Google Maps API key",
+          "description": "Google Maps API key",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "",
+          "values": null
+        }
+      ]
+    },
     {
       "name": "In-app login",
       "description": "Login within the app (identities) instead of using the browser (keycloak)",
