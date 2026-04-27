@@ -3,6 +3,9 @@ package app.cesbar.patches.velov
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patcher.patch.stringOption
+import app.morphe.patcher.patch.Compatibility
+import app.morphe.patcher.patch.AppTarget
+import app.morphe.util.findElementByAttributeValueOrThrow
 
 @Suppress("unused")
 val customMapApiKeyPatch = resourcePatch(
