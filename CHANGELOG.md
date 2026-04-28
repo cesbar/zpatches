@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/cesbar/zpatches/compare/v1.2.0...v1.3.0) (2026-04-28)
+
+
+### Features
+
+* **velov:** fix notfications by spoofing package signature to Firebase ([1692645](https://github.com/cesbar/zpatches/commit/169264595f83a23c5e1d82f3e1610b591868eaef))
+
 # [1.2.0](https://github.com/cesbar/zpatches/compare/v1.1.1...v1.2.0) (2026-04-28)
 
 

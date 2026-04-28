@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "patches": [
     {
       "name": "Custom Maps API Key",
@@ -46,6 +46,18 @@
     {
       "name": "No geolocalisation check",
       "description": "Allows you to unlock a bike even if you're not near the station.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "com.jcdecaux.vls.lyon": [
+          "3.1.1"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Spoof package signature",
+      "description": "Spoofs the package signature required for Firebase, fixes notifications",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
