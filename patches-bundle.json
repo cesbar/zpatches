@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-04-27T20:22:08",
-  "description": "## [1.1.1](https://github.com/cesbar/zpatches/compare/v1.1.0...v1.1.1) (2026-04-27)\n\n\n### Bug Fixes\n\n* **velov:** Feature flags patches not working ([9be8fcc](https://github.com/cesbar/zpatches/commit/9be8fccf693bccd08b9689a5844d5abcb7069358))",
-  "download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.1/patches-1.1.1.mpp",
-  "signature_download_url": "https://github.com/cesbar/zpatches/releases/download/v1.1.1/patches-1.1.1.mpp.asc",
-  "version": "1.1.1"
+  "created_at": "2026-04-28T16:28:37",
+  "description": "# [1.2.0](https://github.com/cesbar/zpatches/compare/v1.1.1...v1.2.0) (2026-04-28)\n\n\n### Features\n\n* **misc:** Export all app activites ([2d20c50](https://github.com/cesbar/zpatches/commit/2d20c50e05bf863a2b41967e35a9381f6e662e96))",
+  "download_url": "https://github.com/cesbar/zpatches/releases/download/v1.2.0/patches-1.2.0.mpp",
+  "signature_download_url": "https://github.com/cesbar/zpatches/releases/download/v1.2.0/patches-1.2.0.mpp.asc",
+  "version": "1.2.0"
 }

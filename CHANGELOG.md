@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/cesbar/zpatches/compare/v1.1.1...v1.2.0) (2026-04-28)
+
+
+### Features
+
+* **misc:** Export all app activites ([2d20c50](https://github.com/cesbar/zpatches/commit/2d20c50e05bf863a2b41967e35a9381f6e662e96))
+
 ## [1.1.1](https://github.com/cesbar/zpatches/compare/v1.1.0...v1.1.1) (2026-04-27)
 
 

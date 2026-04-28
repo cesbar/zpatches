@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
   "patches": [
     {
       "name": "Custom Maps API Key",
@@ -22,6 +22,14 @@
           "values": null
         }
       ]
+    },
+    {
+      "name": "Export all activities",
+      "description": "Makes all activities launchable externally by setting android:exported=\"true\" in the manifest",
+      "use": false,
+      "dependencies": [],
+      "compatiblePackages": null,
+      "options": []
     },
     {
       "name": "In-app login",
