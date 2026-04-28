@@ -24,7 +24,7 @@ val noGeoCheckPatch = bytecodePatch(
     ))
 
     execute {
-        val methodP = ContractsMapperPFingerprint.method
+        val methodP = contractsMapperPFingerprint.method
         val instructions = (methodP.implementation as? MutableMethodImplementation)?.instructions ?: return@execute
 
         val stringIndex = instructions.indexOfFirst {
