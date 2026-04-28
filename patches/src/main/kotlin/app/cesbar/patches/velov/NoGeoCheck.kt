@@ -16,12 +16,7 @@ val noGeoCheckPatch = bytecodePatch(
     name = "No geolocalisation check",
     description = "Allows you to unlock a bike even if you're not near the station."
 ) {
-    compatibleWith(Compatibility(
-        name = "Vélo'v",
-        packageName = "com.jcdecaux.vls.lyon",
-        appIconColor = 0xF42F34,
-        targets = listOf(AppTarget("3.1.1"))
-    ))
+    compatibleWith(Constants.COMPATIBILITY)
 
     execute {
         val methodP = contractsMapperPFingerprint.method

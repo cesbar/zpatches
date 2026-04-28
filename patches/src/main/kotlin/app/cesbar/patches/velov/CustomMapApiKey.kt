@@ -12,12 +12,7 @@ val customMapApiKeyPatch = resourcePatch(
     name = "Custom Maps API Key",
     description = "Replace Velo'v Google Maps key with your own to fix it",
 ) {
-    compatibleWith(Compatibility(
-        name = "Vélo'v",
-        packageName = "com.jcdecaux.vls.lyon",
-        appIconColor = 0xF42F34,
-        targets = listOf(AppTarget("3.1.1"))
-    ))
+    compatibleWith(Constants.COMPATIBILITY)
 
     val mapsApiKeyOption = stringOption(
         key = "mapApiKey",
