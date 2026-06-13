@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/cesbar/zpatches/compare/v1.3.0...v1.4.0) (2026-06-13)
+
+
+### Features
+
+* **Minesweeper The Clean One:** Unlock all purchasable options ([f687904](https://github.com/cesbar/zpatches/commit/f687904d73cdb8ebe189a28763c129c6502318bc))
+
 # [1.3.0](https://github.com/cesbar/zpatches/compare/v1.2.0...v1.3.0) (2026-04-28)
 
 
