@@ -138,5 +138,7 @@ local.properties
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 !*.code-workspace
- 
+
+morphe-data/
+
 _*
