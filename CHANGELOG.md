@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/cesbar/zpatches/compare/v1.5.0...v1.5.1) (2026-06-15)
+
+### 🐛 Bug Fixes
+
+* just an excuse to build... ([2d04a3a](https://github.com/cesbar/zpatches/commit/2d04a3ac43138fa9faaef7977945d39a7fdfa75a))
+* patch list generation ([2a6811f](https://github.com/cesbar/zpatches/commit/2a6811f99aee73cf4a1cec472ce71e9e180403d5))
+
 # [1.5.0](https://github.com/cesbar/zpatches/compare/v1.4.0...v1.5.0) (2026-06-15)
 
 
