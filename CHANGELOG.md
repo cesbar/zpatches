@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/cesbar/zpatches/compare/v1.4.0...v1.5.0) (2026-06-15)
+
+
+### Bug Fixes
+
+* **velov:** removed In-app login patch (deprecated) ([d6afdae](https://github.com/cesbar/zpatches/commit/d6afdae15463fed99d885658c8439cf515fedb03))
+
+
+### Features
+
+* **velov:** Disable map animations ([a20e124](https://github.com/cesbar/zpatches/commit/a20e124ab9f07fd4f6b94a65bce14a294b73f7f9))
+
 # [1.4.0](https://github.com/cesbar/zpatches/compare/v1.3.0...v1.4.0) (2026-06-13)
 
 

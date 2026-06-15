@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "patches": [
     {
       "name": "Custom Maps API Key",
@@ -24,16 +24,8 @@
       ]
     },
     {
-      "name": "Export all activities",
-      "description": "Makes all activities launchable externally by setting android:exported=\"true\" in the manifest",
-      "use": false,
-      "dependencies": [],
-      "compatiblePackages": null,
-      "options": []
-    },
-    {
-      "name": "In-app login",
-      "description": "Login within the app (identities) instead of using the browser (keycloak)",
+      "name": "Disable map animations",
+      "description": "Disable the map zoom-in animation",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
@@ -41,6 +33,14 @@
           "3.1.1"
         ]
       },
+      "options": []
+    },
+    {
+      "name": "Export all activities",
+      "description": "Makes all activities launchable externally by setting android:exported=\"true\" in the manifest",
+      "use": false,
+      "dependencies": [],
+      "compatiblePackages": null,
       "options": []
     },
     {
