@@ -3,7 +3,7 @@
 A collection of [Morphe](https://github.com/MorpheApp) patches useful to me
 
 ## Patch list
-<!-- PATCHES_START -->
+<!-- PATCHES_START EXPANDED -->
 <!-- PATCHES_END -->
 
 ## How to use these patches
