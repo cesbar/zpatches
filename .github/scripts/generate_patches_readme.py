@@ -54,6 +54,19 @@ for patch in data["patches"]:
         if patch["name"] not in universal:
             universal[patch["name"]] = patch
         continue
+    
+    # Normalize compatiblePackages layout dynamically to handle both dicts and lists
+    if isinstance(cp, dict):
+        normalized_cp = []
+        for k, v in cp.items():
+            entry = {"packageName": k}
+            if isinstance(v, dict):
+                entry.update(v)
+            normalized_cp.append(entry)
+        cp = normalized_cp
+    elif not isinstance(cp, list):
+        cp = []
+
     for pkg_entry in cp:
         pkg  = pkg_entry["packageName"]
         name = pkg_entry.get("name") or pkg  # fall back to package name if no label
