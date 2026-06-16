@@ -1,8 +1,7 @@
 package app.cesbar.patches.velov
 
+import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
-import app.morphe.patcher.patch.AppTarget
-import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.bytecodePatch
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
@@ -10,6 +9,15 @@ import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21s
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction11x
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
+
+object contractsMapperPFingerprint : Fingerprint(
+    definingClass = "Lcom/jcdecaux/cyclocity/vls/core/data/source/remote/retrofit/mapper/ContractsMapper;",
+    parameters = listOf(
+        "Lcom/jcdecaux/cyclocity/vls/core/data/source/remote/retrofit/model/contract/Contract;",
+        "Ljava/util/List;"
+    )
+)
+
 
 @Suppress("unused")
 val noGeoCheckPatch = bytecodePatch(
@@ -20,7 +28,7 @@ val noGeoCheckPatch = bytecodePatch(
 
     execute {
         val methodP = contractsMapperPFingerprint.method
-        val instructions = (methodP.implementation as? MutableMethodImplementation)?.instructions ?: return@execute
+        val instructions = methodP.implementation?.instructions ?: return@execute
 
         val stringIndex = instructions.indexOfFirst {
             val ref = (it as? ReferenceInstruction)?.reference as? StringReference
