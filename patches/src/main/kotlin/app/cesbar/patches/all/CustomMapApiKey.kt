@@ -1,4 +1,4 @@
-package app.cesbar.patches.velov
+package app.cesbar.patches.all
 
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.resourcePatch
