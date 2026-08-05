@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/cesbar/zpatches/compare/v1.8.1...v1.9.0) (2026-08-05)
+
+### ✨ New Features
+
+* **velov:** Easy deeplinks configuration ([d833cc6](https://github.com/cesbar/zpatches/commit/d833cc6111ed263a974c501c506247d9c031e834))
+
 ## [1.8.1](https://github.com/cesbar/zpatches/compare/v1.8.0...v1.8.1) (2026-08-03)
 
 ### 🚀 Updated App Support
