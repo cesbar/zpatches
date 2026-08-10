@@ -2,10 +2,12 @@ package app.cesbar.patches.velov
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.removeInstruction
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.util.indexOfFirstInstruction
+import app.morphe.util.indexOfFirstInstructionReversed
 import app.morphe.util.returnEarly
 import com.android.tools.smali.dexlib2.Opcode
-import app.morphe.util.indexOfFirstInstruction
 
 object initializeDidomiFingerprint : Fingerprint(
     definingClass = "Lio/didomi/sdk/Didomi;",
@@ -18,16 +20,21 @@ object isTrackingDialogSeenFingerprint : Fingerprint(
     returnType = "Z"
 )
 
+object onCreateAppFingerprint : Fingerprint(
+    definingClass = "Lcom/jcdecaux/vls/VLSApplication;",
+    name = "onCreate"
+)
+
 val blockDataCollectionPatch = bytecodePatch(
     name = "Block data collection",
-    description = "Block Didomi tracking SDK, hide consent prompts for 3rd party and geolocation data"
+    description = "Block Didomi & Matomo tracking SDKs, hide consent prompts for 3rd party & geolocation data"
 ) {
     compatibleWith(Constants.COMPATIBILITY)
 
     execute {
         initializeDidomiFingerprint.method.returnEarly()
 
-        val moveResultIndex = isTrackingDialogSeenFingerprint.method.indexOfFirstInstruction(Opcode.MOVE_RESULT_OBJECT) 
+        val moveResultIndex = isTrackingDialogSeenFingerprint.method.indexOfFirstInstruction(Opcode.MOVE_RESULT_OBJECT)
         isTrackingDialogSeenFingerprint.method.addInstructions(
             moveResultIndex + 1,
             """
@@ -48,5 +55,8 @@ val blockDataCollectionPatch = bytecodePatch(
                 return v0
             """
         )
+
+        val initMatomoIndex = onCreateAppFingerprint.method.indexOfFirstInstructionReversed(Opcode.INVOKE_DIRECT)
+        onCreateAppFingerprint.method.removeInstruction(initMatomoIndex)
     }
 }
